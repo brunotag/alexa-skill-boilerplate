@@ -1,0 +1,48 @@
+{
+  "name": "alexa-skill-boilerplate",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjjenkinson/alexa-skill-boilerplate.git"
+  },
+  "author": "Cameron Jenkinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cjjenkinson/alexa-skill-boilerplate/issues"
+  },
+  "homepage": "https://github.com/cjjenkinson/alexa-skill-boilerplate#readme",
+  "scripts": {
+    "dev": "alexa-skill-local -f ./src/index.js",
+    "zip": "mkdir -p build && zip function.zip -r package.json *.js src/* models/* node_modules",
+    "test": "cross-env DEBUG=TEST bst test",
+    "lint": "eslint --ignore-path .gitignore \"**/*.js\"",
+    "pre-push": "npm run lint && npm run test"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^5.0.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-import-resolver-babel-module": "^4.0.0-beta.3",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.2.0",
+    "husky": "^1.1.3"
+  },
+  "dependencies": {
+    "alexa-skill-local": "^1.3.0",
+    "ask-sdk-core": "^2.3.0",
+    "ask-sdk-model": "^1.9.0",
+    "cross-env": "^5.2.0",
+    "i18next": "^12.0.0",
+    "i18next-sprintf-postprocessor": "^0.2.2",
+  }
+}

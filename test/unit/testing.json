@@ -1,0 +1,10 @@
+{
+	"handler": "../../src/index.js",
+	"trace": false,
+	"jest": {
+		"silent": false,
+		"coveragePathIgnorePatterns": [
+      "<rootDir>/src/data"
+    ]
+	}
+}

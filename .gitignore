@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+coverage
+dist
+.eslintcache
+yarn-error.log
+.idea
+.DS_Store
+.vscode
+report
+package-lock.json
